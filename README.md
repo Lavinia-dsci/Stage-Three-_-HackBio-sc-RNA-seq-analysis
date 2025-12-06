@@ -24,6 +24,10 @@ The goal is to reconstruct cellular states, identify key genes (e.g., ACE2, ENO2
 5. Visualize transcriptional shifts using UMAP, violin plots, and pseudotime gradients.
 
 
+## To reproduce this analysis:
+        pip install -r requirements.txt
+
+
 ## Dataset
 
 Source: GSE166766 (NCBI GEO)
