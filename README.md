@@ -129,3 +129,48 @@ Scanpy's DPT algorithm mapped cells along an infection trajectory from uninfecte
 
 This means that at 3 dpi, a unique UMAP cluster showed high ACE2 and ENO2 levels, indicating cells with major transcriptional changes. These cells display markers of active viral entry, metabolic shift, oxidative stress, and interferon response. This cluster likely consists of infected, stressed epithelial cells, possibly undergoing apoptosis. The presence of both ACE2 and ENO2 suggests infection drives metabolic activation to support viral replication.
 
+### 5. Pseudotime Interpretation of SARS-CoV-2 Infection Progression
+
+#### Mock (0 dpi) – Homeostatic Airway Organization
+
+In the mock condition, the pseudotime trajectory is smooth and linear, with a clear progression from early to late states.
+Distinct cell types are well separated: airway epithelial cells, ciliated cells, smooth muscle, and mesothelial cells occupy ordered positions along pseudotime.
+This structure reflects normal differentiation and turnover of bronchial epithelium.
+There is no evidence of transcriptional stress or branching, and metabolic and immune pathways remain quiescent.
+
+Interpretation:
+Mock represents a healthy, homeostatic airway epithelium with preserved lineage hierarchy and stable cell identity.
+
+#### 1 dpi – Early Viral Perturbation and Activation
+
+At one day post-infection, pseudotime becomes branched and slightly distorted, suggesting that subsets of cells begin to diverge transcriptionally.
+Clusters annotated as pulmonary alveolar type II cells, airway epithelial cells, and ionocytes shift toward mid-to-late pseudotime, while basal and smooth-muscle populations remain stable.
+This indicates localized viral entry and immune activation within the epithelial layer.
+The late-pseudotime branch likely contains infected or interferon-stimulated cells beginning to alter transcription.
+
+Interpretation:
+1 dpi marks the onset of infection. A subset of ACE2-positive epithelial cells begins to sense and respond to viral RNA, initiating mild stress and antiviral transcription.
+
+#### 2 dpi – Systemic Transcriptional Reprogramming
+
+At 2 dpi, the pseudotime plot (your second image) shows a long, continuous gradient with an expanded late-pseudotime region.
+Distinct epithelial subtypes; airway epithelial cells (1 & 4) and ionocytes (5) dominate this progression, while mesothelial and vascular smooth-muscle cells remain peripheral and transcriptionally inert.
+A small, high-pseudotime tail (yellow in your figure) indicates a cluster of cells undergoing strong transcriptional divergence, probably representing heavily infected or apoptotic cells.
+
+Interpretation:
+2 dpi is the turning point: widespread antiviral signaling and metabolic activation reshape epithelial transcriptional identity while non-target structural cells remain relatively stable.
+
+#### 3 dpi – Inflammation, Remodeling, and Cellular Breakdown
+
+At 3 dpi, the pseudotime manifold becomes fragmented, losing the clear gradient seen earlier.
+Distinct clusters appear for goblet cells, macrophages, airway epithelial, and smooth-muscle cells, indicating immune infiltration and epithelial remodelling.
+Late-pseudotime regions are dominated by inflammatory epithelial and macrophage cells, while normal ciliated and basal populations shrink.
+
+Interpretation:
+By 3 dpi, infection has transitioned from replication to inflammation.
+Transcriptomic order collapses, and airway structure gives way to an inflammatory microenvironment with strong immune and secretory remodelling.
+
+#### Concise Conclusion
+
+Pseudotime analysis across infection stages reveals the temporal unfolding of SARS-CoV-2 pathogenesis in airway epithelium, from ordered homeostasis to chaotic inflammation.
+Infection initiates in ACE2-positive epithelial and ionocyte cells, triggers a metabolic surge (ENO2 ↑) and antiviral activation (2 dpi), and culminates in immune infiltration and epithelial collapse (3 dpi).
