@@ -167,40 +167,32 @@ Meanwhile, lower ACE2 levels in smooth muscle and fibroblast clusters suggest li
 
 The root cell for pseudotime analysis was selected from the basal epithelial cluster, as these represent progenitor-like cells in the bronchial epithelium, aligning with Ravindra et al., 2021.
 
-#### Mock (0 dpi) – Homeostatic Airway Organization
+#### Mock (0 dpi) – Homeostatic Airway Organisation
 
-In the mock condition, the pseudotime trajectory is smooth and linear, with a clear progression from early to late states.
-Distinct cell types are well separated: airway epithelial cells, ciliated cells, smooth muscle, and mesothelial cells occupy ordered positions along pseudotime.
-This structure reflects normal differentiation and turnover of bronchial epithelium.
-There is no evidence of transcriptional stress or branching, and metabolic and immune pathways remain quiescent.
+The pseudotime trajectory of mock (uninfected) cells represents the baseline differentiation hierarchy of airway epithelia. Airway epithelial cells (cluster 0) occupy early pseudotime, while alveolar, ciliated, and ionocyte populations occupy progressively later positions, indicating lineage maturation. Smooth muscle and mesothelial clusters remain transcriptionally distinct, consistent with their non-epithelial identity. This healthy baseline serves as a reference against which infection-induced transcriptional remodelling is later inferred.
 
 Interpretation:
 Mock represents a healthy, homeostatic airway epithelium with preserved lineage hierarchy and stable cell identity.
 
 #### 1 dpi – Early Viral Perturbation and Activation
 
-At one day post-infection, pseudotime becomes branched and slightly distorted, suggesting that subsets of cells begin to diverge transcriptionally.
-Clusters annotated as pulmonary alveolar type II cells, airway epithelial cells, and ionocytes shift toward mid-to-late pseudotime, while basal and smooth-muscle populations remain stable.
-This indicates localised viral entry and immune activation within the epithelial layer.
-The late-pseudotime branch likely contains infected or interferon-stimulated cells beginning to alter transcription.
+The 1 dpi trajectory shows the first detectable shift from baseline epithelial homeostasis toward infection-associated states. The presence of alveolar and ionocyte cells in later pseudotime suggests that viral sensing and metabolic adaptation begin as early as 24 hours post-infection, but global transcriptional remodelling is still incomplete.
 
 Interpretation:
 1 dpi marks the onset of infection. A subset of ACE2-positive epithelial cells begins to sense and respond to viral RNA, initiating mild stress and antiviral transcription.
 
 #### 2 dpi – Systemic Transcriptional Reprogramming
 
-At 2 dpi, the pseudotime plot (your second image) shows a long, continuous gradient with an expanded late-pseudotime region.
-Distinct epithelial subtypes; airway epithelial cells (1 & 4) and ionocytes (5) dominate this progression, while mesothelial and vascular smooth-muscle cells remain peripheral and transcriptionally inert.
-A small, high-pseudotime tail (yellow in your figure) indicates a cluster of cells undergoing strong transcriptional divergence, probably representing heavily infected or apoptotic cells.
+The 2 dpi stage represents the turning point in the infection timeline. It marks the transition from localised viral sensing (1 dpi) to system-wide activation of antiviral and inflammatory transcriptional networks.
+Epithelial cells start losing their homeostatic identity, and ionocytes (key viral targets) emerge as a transcriptionally distinct, late pseudotime population. This is the point where infection-driven reprogramming overtakes normal epithelial differentiation.
 
 Interpretation:
-2 dpi is the turning point: widespread antiviral signaling and metabolic activation reshape epithelial transcriptional identity while non-target structural cells remain relatively stable.
+2 dpi is the turning point: widespread antiviral signalling and metabolic activation reshape epithelial transcriptional identity while non-target structural cells remain relatively stable.
 
 #### 3 dpi – Inflammation, Remodelling, and Cellular Breakdown
 
-At 3 dpi, the pseudotime manifold becomes fragmented, losing the clear gradient seen earlier.
-Distinct clusters appear for goblet cells, macrophages, airway epithelial, and smooth-muscle cells, indicating immune infiltration and epithelial remodelling.
-Late-pseudotime regions are dominated by inflammatory epithelial and macrophage cells, while normal ciliated and basal populations shrink.
+By 3 dpi, SARS-CoV-2 infection induces profound transcriptional remodelling, shifting the cellular system from stable epithelial homeostasis toward a highly inflammatory and immune-dominated state.
+Pseudotime reflects infection progression and tissue response rather than differentiation, with macrophages and goblet cells representing terminal response states.
 
 Interpretation:
 By 3 dpi, infection has transitioned from replication to inflammation.
