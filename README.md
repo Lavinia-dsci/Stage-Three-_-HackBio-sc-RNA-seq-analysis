@@ -1,4 +1,4 @@
-# Stage Three HackBio : SARS-CoV-2-scRNA-seq Trajectory Analysis
+# Stage Three HackBio: SARS-CoV-2-scRNA-seq Trajectory Analysis
 Reference:
 Ravindra et al., “Single-cell longitudinal analysis of SARS-CoV-2 infection in human bronchial epithelial cells,” PLOS Biology (2021).
 https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001143
@@ -108,3 +108,24 @@ Recommended environment:
 - Analysis pipeline: Adapted and optimized by HackBio
 
 - Tools: Scanpy, Decoupler, Matplotlib, Seaborn
+
+## Findings
+
+### 1. Cell type identification across infection stages
+   
+Single-cell RNA-seq of SARS-CoV-2–infected human bronchial epithelial cells revealed distinct transcriptional changes at different infection stages. Basal and club cells were predominant early, but by 1 dpi, ciliated cells showed ISG expression, indicating viral detection. At 2 dpi, increased goblet and ciliated cells suggested mucus production and immune activity. By 3 dpi, ionocytes and some ciliated cells displayed high viral and metabolic gene expression, reflecting active infection or metabolic shifts, consistent with the virus's preference for targeting airway epithelial cells.
+
+### 2. Cell type correlation with SARS-CoV-2 Infection
+
+The infection trajectory (mock → 3 dpi) showed a shift from structural to secretory and metabolically active epithelial states. Ciliated and goblet cells, which express ACE2, are key infection targets, while basal cells mostly remain uninfected but may proliferate for tissue repair. Rare ionocytes have high metabolic activity and ACE2 expression, suggesting susceptibility and transcriptional changes during infection. These cell-type transitions in pseudotime indicate infection-driven airway epithelium reorganization, aligning with Ravindra et al. (2021).
+
+### 3. ACE2 vs ENO2
+
+ACE2 was mainly found in ciliated and ionocyte clusters at 2–3 dpi, but its presence does not reflect infection rates. Although ACE2 serves as the viral receptor, it appears in only some infected cells due to dropout bias in single-cell RNA-seq and possible downregulation after infection. Dropout histograms showed mostly zero counts for ACE2 in these clusters. Thus, ACE2 is more a marker of susceptibility than of infection level. ENO2 expression increased along pseudotime, peaking at 3 dpi, indicating metabolic reprogramming, as it is a glycolytic enzyme found in neuroendocrine and metabolically active cells. Its rise alongside viral and interferon-stimulated genes (like MX1, IFITM1, ISG15) points to a shift toward aerobic glycolysis, characteristic of viral replication and oxidative stress. ACE2 marks susceptibility to viral entry, while ENO2 indicates infection progression and metabolic adaptation, together providing a dual-marker model of cellular response.
+
+### 4. Cluster with the highest abundance of ACE2 after 3dpi
+   
+Scanpy's DPT algorithm mapped cells along an infection trajectory from uninfected (mock) to late infection (3 dpi). Early pseudotime cells showed basal/club-like expression, while later cells (2–3 dpi) had increased ACE2, ENO2, and interferon-response genes, indicating a shift to a stressed epithelial phenotype. UMAP plots revealed a gradient of rising ACE2/ENO2 matching infection progression, with ACE2-high 3 dpi clusters aligning with ionocytes and ciliated cells, reflecting airway viral tropism.
+
+This means that at 3 dpi, a unique UMAP cluster showed high ACE2 and ENO2 levels, indicating cells with major transcriptional changes. These cells display markers of active viral entry, metabolic shift, oxidative stress, and interferon response. This cluster likely consists of infected, stressed epithelial cells, possibly undergoing apoptosis. The presence of both ACE2 and ENO2 suggests infection drives metabolic activation to support viral replication.
+
